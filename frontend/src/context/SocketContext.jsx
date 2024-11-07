@@ -15,7 +15,10 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
+<<<<<<< HEAD
 			// https://localhost:8000
+=======
+>>>>>>> 1623af204d61d0b99dfcd2d4b76063d9882bd54d
 			const socket = io("https://chat-app-ylbu.onrender.com", {
 				query: {
 					userId: authUser._id,
