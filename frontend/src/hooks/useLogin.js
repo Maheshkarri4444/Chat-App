@@ -18,6 +18,11 @@ const useLogin = () => {
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({username,password})
         })
+
+        if (!res.ok) {
+            // If the response status is not OK, throw an error with status text
+            throw new Error(`Failed to login: ${res.statusText}`);
+        }
         const data = await res.json();
         if(data.error){
             throw new Error(data.error)

@@ -9,7 +9,7 @@ import { Navigate } from "react-router-dom";
 const App=()=>{
   const {authUser}=useAuthContext();
   return(
-    <div className="flex items-center justify-center h-screen p-4">
+    <div className="flex items-center justify-center w-full h-screen p-4">
       <Routes>
         <Route path="/" element={authUser ? <Home/> :<Navigate to={"/login"}/>}/>
         <Route path="/login" element={authUser ? <Navigate to="/"/>:<Login/>}/>
