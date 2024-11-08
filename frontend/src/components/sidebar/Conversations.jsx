@@ -1,8 +1,10 @@
+// import { useEffect } from "react";
 import useGetConversations from "../../hooks/useGetConversations";
 import { getRandomEmoji } from "../../utils/emojis";
 import Conversation from "./Conversation";
 
 const Conversations = () => {
+	
 	const { loading, conversations } = useGetConversations();
 	return (
 		<div className='flex flex-col py-2 overflow-auto'>

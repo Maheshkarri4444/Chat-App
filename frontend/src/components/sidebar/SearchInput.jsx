@@ -1,13 +1,17 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import useConversation from "../../zustand/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { useAuthContext } from "../../context/AuthContext";
 
 const SearchInput = () => {
 	const [search, setSearch] = useState("");
 	const { setSelectedConversation } = useConversation();
 	const { conversations } = useGetConversations();
+
+	const {authUser} = useAuthContext();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -25,6 +29,7 @@ const SearchInput = () => {
 	};
 	return (
 		<form onSubmit={handleSubmit} className='flex items-center justify-center gap-2'>
+			<Link to={"/profile"}><button className="btn border-sky-500 btn-circle bg-sky-500"><img src={authUser.profilePic} className="w-12 h-12"/></button></Link>
 			<input
 				type='text'
 				placeholder='Search…'

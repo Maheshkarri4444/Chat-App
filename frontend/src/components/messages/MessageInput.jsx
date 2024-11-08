@@ -18,8 +18,8 @@ const MessageInput = () => {
 		}
 	};
 
-	return (
-		<form className='fixed bottom-0 w-full px-4 my-3' style={{ zIndex: 1000 }} onSubmit={handleSubmit}>
+	return ( //fixed
+		<form className='relative bottom-0 w-full px-4 my-3 ' style={{ zIndex: 1000 }} onSubmit={handleSubmit}>
 			<div className='relative w-full'>
 				<input
 					type='text'

@@ -16,9 +16,9 @@ const Login = () => {
 	return (
 		<div className='flex flex-col items-center justify-center mx-auto min-w-96'>
 			<div className='w-full p-6 bg-gray-400 bg-opacity-0 rounded-lg shadow-md bg-clip-padding backdrop-filter backdrop-blur-lg'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
+				<h1 className='text-3xl font-semibold text-center text-purple-200'>
 					Login
-					<span className='text-blue-500'> ChatApp</span>
+					<span className='text-orange-300'> Chatify</span>
 				</h1>
 
 				<form onSubmit={handleSubmit}>
